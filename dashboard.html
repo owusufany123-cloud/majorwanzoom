@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Member dashboard for Major Zoom Prayers and Teachings."
+    >
+
+    <meta
+        name="theme-color"
+        content="#07090d"
+    >
+
+    <title>
+        Dashboard | Major Zoom Prayers and Teachings
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="dashboard.css"
+    >
+
+</head>
+
+<body>
+
+<!-- =====================================================
+     APPLICATION HEADER
+     ===================================================== -->
+
+<header class="dashboard-header">
+
+    <div class="header-inner">
+
+        <!-- BRAND -->
+
+        <a
+            href="index.html"
+            class="dashboard-brand"
+            aria-label="Major Zoom home"
+        >
+
+            <span
+                class="brand-mark"
+                aria-hidden="true"
+            >
+                MZ
+            </span>
+
+            <span class="brand-text">
+
+                <strong>
+                    MAJOR ZOOM
+                </strong>
+
+                <small>
+                    PRAYERS &amp; TEACHINGS
+                </small>
+
+            </span>
+
+        </a>
+
+
+        <!-- DESKTOP NAVIGATION -->
+
+        <nav
+            class="dashboard-nav"
+            id="dashboardNav"
+            aria-label="Dashboard navigation"
+        >
+
+            <a
+                href="#overview"
+                class="active"
+            >
+                Overview
+            </a>
+
+            <a href="#meetings">
+                Meetings
+            </a>
+
+            <a href="#teachings">
+                Teachings
+            </a>
+
+            <a href="#profile">
+                Profile
+            </a>
+
+        </nav>
+
+
+        <!-- HEADER ACTIONS -->
+
+        <div class="header-actions">
+
+            <a
+                href="index.html"
+                class="home-link"
+            >
+                Home
+            </a>
+
+            <button
+                type="button"
+                id="logoutButton"
+                class="logout-button"
+            >
+                Logout
+            </button>
+
+        </div>
+
+      <button
+    type="button"
+    id="dashboardThemeToggle"
+    class="dashboard-theme-toggle"
+    aria-label="Switch to day mode"
+    aria-pressed="false"
+    title="Switch theme"
+>
+    <span class="theme-toggle-icon" aria-hidden="true">☀️</span>
+    <span class="theme-toggle-label">Day Mode</span>
+</button>
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button
+            type="button"
+            id="dashboardMenuToggle"
+            class="dashboard-menu-toggle"
+            aria-label="Open dashboard menu"
+            aria-expanded="false"
+            aria-controls="dashboardNav"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     MAIN DASHBOARD
+     ===================================================== -->
+
+<main class="dashboard-main">
+
+
+    <!-- =================================================
+         WELCOME / HERO
+         ================================================= -->
+
+    <section
+        id="overview"
+        class="dashboard-hero"
+        aria-labelledby="dashboardTitle"
+    >
+
+        <div class="hero-content">
+
+            <span class="eyebrow">
+                GETHSEMANE FAMILY CHAPEL
+            </span>
+
+            <h1 id="dashboardTitle">
+                Welcome to Your
+                <span>
+                    Prayer Space.
+                </span>
+            </h1>
+
+            <p>
+                Stay connected with prayer meetings,
+                Bible teachings and fellowship with
+                the family.
+            </p>
+
+            <div class="hero-actions">
+
+                <a
+                    href="#meetings"
+                    class="primary-button"
+                >
+                    View Meetings
+
+                    <span aria-hidden="true">
+                        →
+                    </span>
+
+                </a>
+
+                <a
+                    href="#teachings"
+                    class="secondary-button"
+                >
+                    Explore Teachings
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- STATUS CARD -->
+
+        <div class="status-card">
+
+            <div class="status-top">
+
+                <span class="status-dot"></span>
+
+                <span>
+                    MEMBER AREA
+                </span>
+
+            </div>
+
+            <div
+                class="status-icon"
+                aria-hidden="true"
+            >
+                ✦
+            </div>
+
+            <h2>
+                Grow in Faith
+            </h2>
+
+            <p>
+                Pray. Learn. Connect.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         QUICK STATS
+         ================================================= -->
+
+    <section
+        class="quick-stats"
+        aria-label="Member overview"
+    >
+
+        <article class="stat-card">
+
+            <span
+                class="stat-icon"
+                aria-hidden="true"
+            >
+                🙏
+            </span>
+
+            <div>
+
+                <strong>
+                    Prayer
+                </strong>
+
+                <span>
+                    Meetings
+                </span>
+
+            </div>
+
+        </article>
+
+
+        <article class="stat-card">
+
+            <span
+                class="stat-icon"
+                aria-hidden="true"
+            >
+                📖
+            </span>
+
+            <div>
+
+                <strong>
+                    Bible
+                </strong>
+
+                <span>
+                    Teachings
+                </span>
+
+            </div>
+
+        </article>
+
+
+        <article class="stat-card">
+
+            <span
+                class="stat-icon"
+                aria-hidden="true"
+            >
+                🎥
+            </span>
+
+            <div>
+
+                <strong>
+                    Live
+                </strong>
+
+                <span>
+                    Fellowship
+                </span>
+
+            </div>
+
+        </article>
+
+
+        <article class="stat-card">
+
+            <span
+                class="stat-icon"
+                aria-hidden="true"
+            >
+                👤
+            </span>
+
+            <div>
+
+                <strong>
+                    My
+                </strong>
+
+                <span>
+                    Profile
+                </span>
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+    <!-- =================================================
+         UPCOMING MEETINGS
+         ================================================= -->
+
+    <section
+        id="meetings"
+        class="dashboard-section"
+        aria-labelledby="meetingsTitle"
+    >
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-label">
+                    JOIN THE FAMILY
+                </span>
+
+                <h2 id="meetingsTitle">
+                    Upcoming Meetings
+                </h2>
+
+            </div>
+
+            <span class="section-badge">
+                MEMBER ACCESS
+            </span>
+
+        </div>
+
+
+        <!--
+            Real meetings created by the administrator
+            will be loaded into this container by
+            dashboard.js.
+        -->
+
+        <div
+            id="meetingsContainer"
+            class="meetings-container"
+            aria-live="polite"
+        >
+
+            <article class="empty-card">
+
+                <div
+                    class="empty-icon"
+                    aria-hidden="true"
+                >
+                    🙏
+                </div>
+
+                <h3>
+                    Loading Meetings...
+                </h3>
+
+                <p>
+                    Checking for upcoming prayer meetings
+                    and Bible teachings.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         TEACHINGS
+         ================================================= -->
+
+    <section
+        id="teachings"
+        class="dashboard-section"
+        aria-labelledby="teachingsTitle"
+    >
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-label">
+                    GROW IN THE WORD
+                </span>
+
+                <h2 id="teachingsTitle">
+                    Bible Teachings
+                </h2>
+
+            </div>
+
+            <a
+                href="#teachings"
+                class="view-all-link"
+            >
+                View All →
+            </a>
+
+        </div>
+
+
+        <div class="teaching-grid">
+
+
+            <article class="teaching-card">
+
+                <div
+                    class="teaching-icon"
+                    aria-hidden="true"
+                >
+                    ✦
+                </div>
+
+                <span>
+                    FAITH
+                </span>
+
+                <h3>
+                    Faith &amp; Prayer
+                </h3>
+
+                <p>
+                    Discover how faith and prayer
+                    strengthen your walk with God.
+                </p>
+
+                <button
+                    type="button"
+                    class="teaching-button"
+                >
+                    Coming Soon →
+                </button>
+
+            </article>
+
+
+            <article class="teaching-card">
+
+                <div
+                    class="teaching-icon"
+                    aria-hidden="true"
+                >
+                    ✦
+                </div>
+
+                <span>
+                    SCRIPTURE
+                </span>
+
+                <h3>
+                    Understanding God's Word
+                </h3>
+
+                <p>
+                    Explore biblical lessons and
+                    practical understanding of Scripture.
+                </p>
+
+                <button
+                    type="button"
+                    class="teaching-button"
+                >
+                    Coming Soon →
+                </button>
+
+            </article>
+
+
+            <article class="teaching-card">
+
+                <div
+                    class="teaching-icon"
+                    aria-hidden="true"
+                >
+                    ✦
+                </div>
+
+                <span>
+                    CHRISTIAN LIVING
+                </span>
+
+                <h3>
+                    Living for Christ
+                </h3>
+
+                <p>
+                    Learn principles that help you
+                    live out your faith every day.
+                </p>
+
+                <button
+                    type="button"
+                    class="teaching-button"
+                >
+                    Coming Soon →
+                </button>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         PROFILE PREVIEW
+         ================================================= -->
+
+    <section
+        id="profile"
+        class="dashboard-section profile-section"
+        aria-labelledby="profileTitle"
+    >
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-label">
+                    YOUR ACCOUNT
+                </span>
+
+                <h2 id="profileTitle">
+                    My Profile
+                </h2>
+
+            </div>
+
+            <span class="section-badge">
+                MEMBER
+            </span>
+
+        </div>
+
+
+        <div class="profile-card">
+
+            <div
+                class="profile-avatar"
+                id="profileAvatar"
+                aria-hidden="true"
+            >
+                M
+            </div>
+
+
+            <div class="profile-info">
+
+                <span class="profile-role">
+                    MEMBER
+                </span>
+
+                <h3 id="profileName">
+                    Loading member...
+                </h3>
+
+                <p id="profileEmail">
+                    Loading email...
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="editProfileButton"
+                class="profile-button"
+            >
+                Edit Profile
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         DASHBOARD MESSAGE
+         ================================================= -->
+
+    <div
+        id="dashboardMessage"
+        class="dashboard-message"
+        role="status"
+        aria-live="polite"
+    ></div>
+
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer class="dashboard-footer">
+
+    <p class="copyright">
+        © 2026 Major Zoom Prayers and Teachings.
+        All Rights Reserved.
+    </p>
+
+    <p>
+        Gethsemane Family Chapel
+    </p>
+
+</footer>
+
+
+<!-- =====================================================
+     SUPABASE
+     ===================================================== -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+></script>
+
+<script src="supabase-config.js"></script>
+
+<script src="dashboard.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login to Major Zoom Prayers and Teachings by Gethsemane Family Chapel.">
+    <meta name="theme-color" content="#07090d">
+
+    <title>Login | Major Zoom Prayers and Teachings</title>
+
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <div class="background-glow glow-one" aria-hidden="true"></div>
+    <div class="background-glow glow-two" aria-hidden="true"></div>
+
+    <main class="login-page">
+        <section class="login-card" aria-labelledby="loginTitle">
+
+            <div class="brand">
+                <div class="brand-mark" aria-hidden="true">MZ</div>
+
+                <div class="brand-text">
+                    <strong>MAJOR ZOOM</strong>
+                    <span>PRAYERS &amp; TEACHINGS</span>
+                </div>
+            </div>
+
+            <div class="login-heading">
+                <span class="eyebrow">GETHSEMANE FAMILY CHAPEL</span>
+
+                <h1 id="loginTitle">Welcome Back</h1>
+
+                <p>
+                    Sign in to join prayer meetings, Bible teachings,
+                    and fellowship with the family.
+                </p>
+            </div>
+
+            <form id="loginForm" class="login-form" novalidate>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        inputmode="email"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <div class="label-row">
+                        <label for="password">Password</label>
+
+                        <a href="#" id="forgotPassword">
+                            Forgot password?
+                        </a>
+                    </div>
+
+                    <div class="password-wrapper">
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="togglePassword"
+                            class="password-toggle"
+                            aria-label="Show password"
+                            aria-controls="password"
+                            aria-pressed="false"
+                        >
+                            SHOW
+                        </button>
+                    </div>
+                </div>
+
+                <div class="remember-row">
+                    <label class="checkbox-label">
+                        <input
+                            type="checkbox"
+                            id="rememberMe"
+                            name="rememberMe"
+                        >
+                        <span>Remember me</span>
+                    </label>
+                </div>
+
+                <button
+                    type="submit"
+                    class="login-button"
+                    id="loginButton"
+                >
+                    <span>Sign In</span>
+                    <span class="button-arrow" aria-hidden="true">→</span>
+                </button>
+
+                <div
+                    id="loginMessage"
+                    class="login-message"
+                    aria-live="polite"
+                    role="status"
+                ></div>
+
+            </form>
+
+            <div class="register-area">
+                <p>
+                    Don't have an account?
+                    <a href="register.html">Create an account</a>
+                </p>
+            </div>
+
+            <a href="index.html" class="back-home">
+                ← Back to Home
+            </a>
+
+        </section>
+    </main>
+
+    <!-- Supabase scripts: keep this order -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="login.js"></script>
+
+</body>
+</html>

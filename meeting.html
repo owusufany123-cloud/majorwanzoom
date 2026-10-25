@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Major Zoom Prayers and Teachings meeting room."
+    >
+
+    <title>
+        Meeting Room | Major Zoom Prayers and Teachings
+    </title>
+
+    <link rel="stylesheet" href="meeting.css">
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         MEETING APPLICATION
+         ===================================================== -->
+
+    <div class="meeting-app">
+
+
+        <!-- =================================================
+             TOP BAR
+             ================================================= -->
+
+        <header class="meeting-header">
+
+
+            <div class="meeting-brand">
+
+                <div class="meeting-brand-mark">
+                    MZ
+                </div>
+
+                <div class="meeting-brand-text">
+
+                    <strong>
+                        MAJOR ZOOM
+                    </strong>
+
+                    <span>
+                        PRAYERS &amp; TEACHINGS
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="meeting-information">
+
+                <div class="meeting-title-area">
+
+                    <span
+                        class="meeting-live-indicator"
+                        id="meetingLiveIndicator"
+                    >
+
+                        <span></span>
+
+                        CONNECTING
+
+                    </span>
+
+
+                    <h1 id="meetingTitle">
+                        Meeting Room
+                    </h1>
+
+                </div>
+
+
+                <span
+                    class="meeting-type-label"
+                    id="meetingType"
+                >
+                    Prayer Meeting
+                </span>
+
+            </div>
+
+
+
+            <div class="meeting-header-actions">
+
+                <div class="connection-status">
+
+                    <span
+                        id="connectionDot"
+                        class="connection-dot"
+                    ></span>
+
+                    <span id="connectionText">
+                        Connecting...
+                    </span>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="leaveMeetingButton"
+                    class="leave-button"
+                >
+                    Leave
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             MAIN ROOM
+             ================================================= -->
+
+        <main class="meeting-main">
+
+
+            <!-- =============================================
+                 VIDEO AREA
+                 ============================================= -->
+
+            <section
+                class="video-stage"
+                id="videoStage"
+            >
+
+
+                <!-- HOST / LOCAL VIDEO -->
+
+                <div
+                    class="video-tile local-video-tile"
+                    id="localVideoTile"
+                >
+
+                    <video
+                        id="localVideo"
+                        autoplay
+                        muted
+                        playsinline
+                    ></video>
+
+
+                    <div
+                        class="video-placeholder"
+                        id="localVideoPlaceholder"
+                    >
+
+                        <div class="placeholder-avatar">
+                            👤
+                        </div>
+
+                        <span>
+                            Your camera is off
+                        </span>
+
+                    </div>
+
+
+                    <div class="video-name">
+
+                        <span id="localParticipantName">
+                            You
+                        </span>
+
+                        <span class="you-label">
+                            YOU
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- REMOTE PARTICIPANTS -->
+
+                <div
+                    id="remoteVideos"
+                    class="remote-videos"
+                ></div>
+
+
+
+                <!-- =========================================
+                     ROOM LOADING OVERLAY
+                     ========================================= -->
+
+                <div
+                    id="roomLoading"
+                    class="room-overlay"
+                >
+
+                    <div class="loading-spinner"></div>
+
+                    <h2>
+                        Preparing Meeting Room
+                    </h2>
+
+                    <p id="roomLoadingMessage">
+                        Connecting securely...
+                    </p>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     ROOM ERROR
+                     ========================================= -->
+
+                <div
+                    id="roomError"
+                    class="room-overlay error-overlay"
+                    hidden
+                >
+
+                    <div class="error-icon">
+                        !
+                    </div>
+
+                    <h2>
+                        Unable to Join
+                    </h2>
+
+                    <p id="roomErrorMessage">
+                        We could not connect you to this meeting.
+                    </p>
+
+                    <button
+                        type="button"
+                        id="errorBackButton"
+                        class="secondary-button"
+                    >
+                        Back to Dashboard
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 SIDE PANEL
+                 ============================================= -->
+
+            <aside class="meeting-sidebar">
+
+
+                <!-- PARTICIPANTS -->
+
+                <section class="sidebar-section">
+
+                    <div class="sidebar-heading">
+
+                        <div>
+
+                            <span class="sidebar-icon">
+                                👥
+                            </span>
+
+                            <h2>
+                                Participants
+                            </h2>
+
+                        </div>
+
+
+                        <span
+                            id="participantCount"
+                            class="participant-count"
+                        >
+                            0
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        id="participantsList"
+                        class="participants-list"
+                    >
+
+                        <div class="participants-empty">
+
+                            <span>
+                                👤
+                            </span>
+
+                            <p>
+                                Waiting for participants...
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- CHAT -->
+
+                <section class="sidebar-section chat-section">
+
+                    <div class="sidebar-heading">
+
+                        <div>
+
+                            <span class="sidebar-icon">
+                                💬
+                            </span>
+
+                            <h2>
+                                Meeting Chat
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="chatMessages"
+                        class="chat-messages"
+                    >
+
+                        <div class="chat-empty">
+
+                            <span>
+                                💬
+                            </span>
+
+                            <p>
+                                Meeting chat will appear here.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <form
+                        id="chatForm"
+                        class="chat-form"
+                    >
+
+                        <input
+                            type="text"
+                            id="chatInput"
+                            placeholder="Type a message..."
+                            autocomplete="off"
+                            maxlength="500"
+                        >
+
+
+                        <button
+                            type="submit"
+                            aria-label="Send message"
+                        >
+                            ➤
+                        </button>
+
+                    </form>
+
+                </section>
+
+            </aside>
+
+        </main>
+
+
+
+        <!-- =================================================
+             CONTROL BAR
+             ================================================= -->
+
+        <footer class="meeting-controls">
+
+
+            <div class="meeting-control-group">
+
+
+                <!-- MICROPHONE -->
+
+                <button
+                    type="button"
+                    id="microphoneButton"
+                    class="meeting-control"
+                    aria-label="Toggle microphone"
+                >
+
+                    <span class="control-icon">
+                        🎤
+                    </span>
+
+                    <span class="control-label">
+                        Mute
+                    </span>
+
+                </button>
+
+
+
+                <!-- CAMERA -->
+
+                <button
+                    type="button"
+                    id="cameraButton"
+                    class="meeting-control"
+                    aria-label="Toggle camera"
+                >
+
+                    <span class="control-icon">
+                        📹
+                    </span>
+
+                    <span class="control-label">
+                        Camera
+                    </span>
+
+                </button>
+
+
+
+                <!-- SCREEN SHARE -->
+
+                <button
+                    type="button"
+                    id="screenShareButton"
+                    class="meeting-control"
+                    aria-label="Share screen"
+                >
+
+                    <span class="control-icon">
+                        🖥️
+                    </span>
+
+                    <span class="control-label">
+                        Share
+                    </span>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- HOST CONTROLS -->
+
+            <div
+                class="host-control-group"
+                id="hostControls"
+                hidden
+            >
+
+                <span class="host-badge">
+                    ADMIN HOST
+                </span>
+
+
+                <button
+                    type="button"
+                    id="endMeetingButton"
+                    class="end-meeting-button"
+                >
+                    End Meeting
+                </button>
+
+            </div>
+
+
+
+            <div
+                class="meeting-control-group right-controls"
+            >
+
+
+                <!-- CHAT TOGGLE -->
+
+                <button
+                    type="button"
+                    id="chatToggleButton"
+                    class="meeting-control"
+                    aria-label="Toggle chat"
+                >
+
+                    <span class="control-icon">
+                        💬
+                    </span>
+
+                    <span class="control-label">
+                        Chat
+                    </span>
+
+                </button>
+
+
+
+                <!-- PARTICIPANTS TOGGLE -->
+
+                <button
+                    type="button"
+                    id="participantsToggleButton"
+                    class="meeting-control"
+                    aria-label="Toggle participants"
+                >
+
+                    <span class="control-icon">
+                        👥
+                    </span>
+
+                    <span class="control-label">
+                        People
+                    </span>
+
+                </button>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         SUPABASE
+         ===================================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="supabase-config.js"></script>
+
+    <script src="meeting.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+    name="description"
+    content="Admin dashboard for Major Zoom Prayers and Teachings."
+>
+
+<meta
+    name="theme-color"
+    content="#07090d"
+>
+
+<title>
+    Admin Dashboard | Major Zoom Prayers and Teachings
+</title>
+
+<link
+    rel="stylesheet"
+    href="admin.css"
+>
+
+</head>
+
+<body>
+
+<!-- =====================================================
+     ADMIN HEADER
+     ===================================================== -->
+
+<header class="admin-header">
+
+    <div class="admin-header-inner">
+
+
+        <!-- BRAND -->
+
+        <a
+            href="dashboard.html"
+            class="admin-brand"
+        >
+
+            <div
+                class="brand-mark"
+                aria-hidden="true"
+            >
+                MZ
+            </div>
+
+            <div class="brand-text">
+
+                <strong>
+                    MAJOR ZOOM
+                </strong>
+
+                <span>
+                    ADMIN PANEL
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <!-- DESKTOP NAV -->
+
+        <nav
+            class="admin-nav"
+            id="adminNav"
+            aria-label="Admin navigation"
+        >
+
+            <a
+                href="#overview"
+                class="active"
+            >
+                Overview
+            </a>
+
+            <a href="#meetings">
+                Meetings
+            </a>
+
+            <a href="#teachings">
+                Teachings
+            </a>
+
+            <a href="#members">
+                Members
+            </a>
+
+        </nav>
+
+
+        <!-- HEADER ACTIONS -->
+
+        <div class="admin-actions">
+
+           
+
+
+            <!-- =================================================
+                 DAY / NIGHT MODE
+                 ================================================= -->
+          <button
+    type="button"
+    id="themeToggle"
+    class="theme-toggle"
+    aria-label="Switch to night mode"
+    aria-pressed="false"
+>
+    🌙
+</button>
+        
+
+
+            <button
+                type="button"
+                id="adminLogout"
+                class="logout-button"
+            >
+                Logout
+            </button>
+
+        </div>
+
+
+        <!-- MOBILE MENU -->
+
+        <button
+            type="button"
+            id="adminMenuToggle"
+            class="admin-menu-toggle"
+            aria-label="Open admin navigation menu"
+            aria-expanded="false"
+            aria-controls="adminNav"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN ADMIN CONTENT
+     ===================================================== -->
+
+<main class="admin-main">
+
+
+    <!-- =================================================
+         PAGE HERO
+         ================================================= -->
+
+    <section
+        class="admin-hero"
+        id="overview"
+    >
+
+        <div class="hero-content">
+
+            <span class="section-label">
+                GETHSEMANE FAMILY CHAPEL
+            </span>
+
+            <h1>
+                Admin Control Center
+            </h1>
+
+            <p>
+                Manage prayer meetings, Bible teachings,
+                members, and the Major Zoom platform
+                from one secure place.
+            </p>
+
+        </div>
+
+
+        <div class="admin-status-card">
+
+            <div class="status-dot"></div>
+
+            <div>
+
+                <span class="status-label">
+                    ADMIN ACCESS
+                </span>
+
+                <strong>
+                    System Ready
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         ADMIN MESSAGE
+         ================================================= -->
+
+    <div
+        id="adminMessage"
+        class="admin-message"
+        aria-live="polite"
+        role="status"
+    ></div>
+
+
+
+    <!-- =================================================
+         QUICK STATISTICS
+         ================================================= -->
+
+    <section
+        class="admin-stats"
+        aria-label="Platform statistics"
+    >
+
+
+        <article class="admin-stat-card">
+
+            <span class="stat-icon">
+                ◉
+            </span>
+
+            <div>
+
+                <span class="stat-label">
+                    Total Members
+                </span>
+
+                <strong id="totalMembers">
+                    —
+                </strong>
+
+            </div>
+
+        </article>
+
+
+        <article class="admin-stat-card">
+
+            <span class="stat-icon">
+                ◈
+            </span>
+
+            <div>
+
+                <span class="stat-label">
+                    Upcoming Meetings
+                </span>
+
+                <strong id="totalMeetings">
+                    —
+                </strong>
+
+            </div>
+
+        </article>
+
+
+        <article class="admin-stat-card">
+
+            <span class="stat-icon">
+                ✦
+            </span>
+
+            <div>
+
+                <span class="stat-label">
+                    Bible Teachings
+                </span>
+
+                <strong id="totalTeachings">
+                    —
+                </strong>
+
+            </div>
+
+        </article>
+
+
+        <article class="admin-stat-card">
+
+            <span class="stat-icon">
+                ✓
+            </span>
+
+            <div>
+
+                <span class="stat-label">
+                    Platform Status
+                </span>
+
+                <strong>
+                    Online
+                </strong>
+
+            </div>
+
+        </article>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         MEETINGS MANAGEMENT
+         ================================================= -->
+
+    <section
+        class="admin-section"
+        id="meetings"
+    >
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-label">
+                    MEETING MANAGEMENT
+                </span>
+
+                <h2>
+                    Prayer Meetings
+                </h2>
+
+                <p>
+                    Create and manage the prayer meetings
+                    that members are allowed to join.
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="createMeetingButton"
+                class="primary-button"
+            >
+                + Create Meeting
+            </button>
+
+        </div>
+
+
+        <div
+            id="meetingsContainer"
+            class="admin-list"
+        >
+
+            <div class="admin-empty-card">
+
+                <span class="empty-icon">
+                    ◈
+                </span>
+
+                <h3>
+                    No Meetings Yet
+                </h3>
+
+                <p>
+                    Create your first prayer meeting
+                    to make it available to members.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         TEACHINGS MANAGEMENT
+         ================================================= -->
+
+    <section
+        class="admin-section"
+        id="teachings"
+    >
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-label">
+                    TEACHING MANAGEMENT
+                </span>
+
+                <h2>
+                    Bible Teachings
+                </h2>
+
+                <p>
+                    Organize Bible teachings and spiritual
+                    lessons for the chapel family.
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="createTeachingButton"
+                class="primary-button"
+            >
+                + Add Teaching
+            </button>
+
+        </div>
+
+
+        <div
+            id="teachingsContainer"
+            class="admin-list"
+        >
+
+            <div class="admin-empty-card">
+
+                <span class="empty-icon">
+                    ✦
+                </span>
+
+                <h3>
+                    No Teachings Yet
+                </h3>
+
+                <p>
+                    Add Bible teachings that members
+                    can access from their dashboard.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         MEMBER MANAGEMENT
+         ================================================= -->
+
+    <section
+        class="admin-section"
+        id="members"
+    >
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-label">
+                    MEMBER MANAGEMENT
+                </span>
+
+                <h2>
+                    Members
+                </h2>
+
+                <p>
+                    View and manage registered members
+                    of the Major Zoom platform.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="membersContainer"
+            class="admin-list"
+        >
+
+            <div class="admin-empty-card">
+
+                <span class="empty-icon">
+                    ◉
+                </span>
+
+                <h3>
+                    Member Management
+                </h3>
+
+                <p>
+                    Member information will appear here
+                    after the secure admin connection
+                    is completed.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         SECURITY NOTICE
+         ================================================= -->
+
+    <section class="security-notice">
+
+        <div class="security-icon">
+            🔐
+        </div>
+
+        <div>
+
+            <span class="section-label">
+                SECURITY
+            </span>
+
+            <h2>
+                Administrator Access Only
+            </h2>
+
+            <p>
+                This control center is reserved for
+                authorized administrators. Member accounts
+                must never be allowed to create or host
+                meetings.
+            </p>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer class="admin-footer">
+
+    <p class="copyright">
+        © Major Zoom Prayers and Teachings.
+        All Rights Reserved.
+    </p>
+
+    <p>
+        Gethsemane Family Chapel
+    </p>
+
+</footer>
+
+
+
+<!-- =====================================================
+     SUPABASE
+     ===================================================== -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+></script>
+
+<script src="supabase-config.js"></script>
+
+<script src="admin.js"></script>
+
+</body>
+
+</html>
